@@ -84,16 +84,18 @@ export default {
 }
 </script>
 <style>
+
 .post{
     border-top: 1px solid grey;
-    margin: 20px 0;
+    margin: 20px 0 20px 40px;
 }
 .delete-post{
     margin-bottom: 20px;
 }
 
-img{
+.post img{
     max-width: 200px;
 }
+
 
 </style>

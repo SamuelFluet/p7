@@ -1,12 +1,14 @@
 <template>
   <main>
-    <h1>Les posts</h1>
+    <h1></h1>
+    <div class= "formst">
     <form @submit.prevent="addPost">
-      <h2>Ajouter un post</h2>
-      <input type="text" placeholder="post" v-model="content" required>
+      <h2></h2>
+      <input type="text" placeholder="A quoi pensez vous ?" v-model="content" required>
       <input type="file" @change="upload">
       <button type="submit">Poster</button>
     </form>
+    </div>
     <Post v-for="post in posts" :key="post.id" 
           :post="post"
           @deletePost="deletePost(post.id)"
@@ -83,4 +85,9 @@ export default {
   }
 }
 </script>
+<style >
+.formst{
+    margin-left:40px;
+}
+</style>
 

@@ -1,10 +1,11 @@
 <template>
-    <form @submit.prevent="handleSubmit">
+        <form @submit.prevent="handleSubmit">
         <h1>Connection</h1>
         <input  v-model="email" type="email" required label="Enter Email"/>
         <input v-model="password" type="password" required label="Password"/>        
         <button class="button">Log in</button>
-    </form>
+        </form>
+
 </template>
 <script>
 export default {
@@ -27,3 +28,9 @@ export default {
     },
 }
 </script>
+<style >
+.form{
+    display: flex;
+    justify-content: space-around;
+}
+</style>
