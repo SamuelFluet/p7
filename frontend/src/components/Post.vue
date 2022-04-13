@@ -7,7 +7,7 @@
             <button @click="deletePost">Supprimer</button>
         </div>
         <form @submit.prevent="addComment">
-            <input type="text" v-model="commentaire" placeholder="ajouter un commentaire">
+            <input type="text" v-model="commentaire" placeholder="ajouter un commentaire" required >
             <button type="submit">Commenter</button>
         </form>
         <Comment v-for="comment in comments" :key="comment.id" 

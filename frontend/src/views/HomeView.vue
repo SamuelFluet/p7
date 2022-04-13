@@ -3,7 +3,7 @@
     <h1>Les posts</h1>
     <form @submit.prevent="addPost">
       <h2>Ajouter un post</h2>
-      <input type="text" placeholder="post" v-model="content">
+      <input type="text" placeholder="post" v-model="content" required>
       <input type="file" @change="upload">
       <button type="submit">Poster</button>
     </form>
