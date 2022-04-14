@@ -103,6 +103,9 @@ export default {
     margin : 10px;
     padding-top: 5px;
 }
+.postcontent input{
+    width: 60%;
+}
 .delete-post{
     margin-bottom: 20px;
 }
