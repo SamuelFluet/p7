@@ -43,10 +43,12 @@ h1{
 .co input{
     margin : 10px;
     width: 130%;
+    height: 30px;;
 }
 .co button{
-    display: flex;
-    justify-content: space-around;
+    margin: auto;
+    width : 135%;
+    font-size: 15px;
 }
 
 </style>
