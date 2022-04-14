@@ -1,10 +1,12 @@
 <template>
-        <form @submit.prevent="handleSubmit">
-        <h1>Connection</h1>
-        <input  v-model="email" type="email" required label="Enter Email"/>
-        <input v-model="password" type="password" required label="Password"/>        
-        <button class="button">Log in</button>
-        </form>
+        <div class="co">
+            <form @submit.prevent="handleSubmit">
+            <h1>Connection</h1>
+            <input  v-model="email" type="email" required label="Enter Email"/>
+            <input v-model="password" type="password" required label="Password"/>        
+            <button class="button">Log in</button>
+            </form>
+        </div>
 
 </template>
 <script>
@@ -29,8 +31,22 @@ export default {
 }
 </script>
 <style >
-.form{
+.co{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 50px;
+}
+h1{
     display: flex;
     justify-content: space-around;
 }
+.co input{
+    margin : 10px;
+    width: 130%;
+}
+.co button{
+    display: flex;
+    justify-content: space-around;
+}
+
 </style>

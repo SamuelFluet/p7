@@ -48,9 +48,15 @@ export default {
   max-width: 1000px;
   margin: auto;
   background-color: white;
+  font-family: Verdana;
 }
 body{
-  background-color: grey;
+  background-color: rgb(240, 116, 45);
+  font-family: Verdana 10px ;
+  margin:0px;
+}
+.button{
+  color: ;
 }
 .nav{
     display: flex;
@@ -58,8 +64,10 @@ body{
     justify-content: space-between;
 }
 .navanchor{
-  margin-left : 10px;
-  margin-right : 10px;
+  margin: 20px;
+  padding-top : 20px;
+  text-decoration: none;
+
 }
 .hellobox{
   display: flex;

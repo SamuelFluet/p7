@@ -5,8 +5,10 @@
     <form @submit.prevent="addPost">
       <h2></h2>
       <input type="text" placeholder="A quoi pensez vous ?" v-model="content" required>
-      <input type="file" @change="upload">
-      <button type="submit">Poster</button>
+      <div>
+        <input type="file" @change="upload">
+        <button type="submit">Poster</button>
+      </div>
     </form>
     </div>
     <Post v-for="post in posts" :key="post.id" 
@@ -87,7 +89,11 @@ export default {
 </script>
 <style >
 .formst{
-    margin-left:40px;
+  margin-left:40px;
+}
+.formst input{
+  width: 95%;
+  height: 50px;
 }
 </style>
 

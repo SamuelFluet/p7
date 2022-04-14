@@ -1,19 +1,25 @@
 <template>
     <div class="post">
-        <p>{{post.content}}</p>
-        <img :src="post.imageurl" v-if="post.imageurl">
-        <p>Fait par {{author.username}} le {{post.date}}</p>
-        <div v-if="user.id == post.userid || user.role === 'admin'" class="delete-post">
-            <button @click="deletePost">Supprimer</button>
+        <div class = "postcontent">
+            <p>{{post.content}}</p>
+            <img :src="post.imageurl" v-if="post.imageurl">
+            <div class="dateButton">
+                <p>Fait par {{author.username}} le {{post.date}}</p>
+                <div v-if="user.id == post.userid || user.role === 'admin'" class="delete-post">
+                    <button @click="deletePost">Supprimer</button>
+                </div>
+            </div>
         </div>
         <form @submit.prevent="addComment">
             <input type="text" v-model="commentaire" placeholder="ajouter un commentaire" required >
             <button type="submit">Commenter</button>
         </form>
-        <Comment v-for="comment in comments" :key="comment.id" 
-        :comment="comment"
-        @deleteComment="deleteComment(comment.id)"
-        />
+        <div class= "commentContent">
+            <Comment v-for="comment in comments" :key="comment.id" 
+            :comment="comment"
+            @deleteComment="deleteComment(comment.id)"
+            />
+        </div>
     </div>
 </template>
 <script>
@@ -86,8 +92,16 @@ export default {
 <style>
 
 .post{
-    border-top: 1px solid grey;
-    margin: 20px 0 20px 40px;
+    margin: 20px 0 20px 40px;   
+}
+.postcontent{
+    background-color: grey;
+    border-radius: 15px;
+    margin-right: 20px;
+}
+.postcontent p{
+    margin : 10px;
+    padding-top: 5px;
 }
 .delete-post{
     margin-bottom: 20px;
@@ -95,6 +109,20 @@ export default {
 
 .post img{
     max-width: 200px;
+}
+.commentContent{
+    background-color: rgba(189, 202, 189, 0.877);
+    border-radius: 15px;
+    margin-right: 20px;
+    padding-left: 10px;;
+}
+
+.dateButton p{
+    font-size: 12px;
+}
+.button{
+    border-radius: 10px;
+
 }
 
 

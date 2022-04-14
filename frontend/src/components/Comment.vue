@@ -1,7 +1,9 @@
 <template>
     <div class="comment">
-        {{comment.content}} - fait par {{author.username}} le  {{comment.date}}
-        <button v-if="user.id == comment.userid || user.role === 'admin'" @click="deleteComment">supprimer</button>
+        <div class = "dateButton">
+            {{comment.content}} <p>fait par {{author.username}} le  {{comment.date}}</p>
+            <button v-if="user.id == comment.userid || user.role === 'admin'" @click="deleteComment">supprimer</button>
+        </div>
     </div>
 </template>
 <script>
@@ -44,4 +46,8 @@ export default {
 .comment{
     padding: 10px 0;
 }
+.dateButton p{
+    font-size: 12px;
+}
+
 </style>

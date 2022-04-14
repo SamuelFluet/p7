@@ -2,7 +2,7 @@
     <div class="profil">
         <p>{{user.username}}</p>
         <p>{{user.email}}</p>
-        <button @click="deleteUser">Supprier mon compte</button>
+        <button @click="deleteUser">Supprimer mon compte</button>
     </div>
 </template>
 <script>
@@ -21,3 +21,10 @@ export default {
 
 }
 </script>
+<style >
+.profil{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;;
+}
+</style>
