@@ -2,14 +2,14 @@
   <main>
     <h1></h1>
     <div class= "formst">
-    <form @submit.prevent="addPost">
-      <h2></h2>
-      <input type="text" placeholder="A quoi pensez vous ?" v-model="content" required>
-      <div>
-        <input type="file" @change="upload">
-        <button type="submit">Poster</button>
-      </div>
-    </form>
+      <form @submit.prevent="addPost">
+        <h2></h2>
+        <input type="text" placeholder="A quoi pensez vous ?" v-model="content" required>
+        <div>
+          <input type="file" @change="upload">
+          <button type="submit">Poster</button>
+        </div>
+      </form>
     </div>
     <Post v-for="post in posts" :key="post.id" 
           :post="post"

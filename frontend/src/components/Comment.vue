@@ -45,9 +45,12 @@ export default {
 <style>
 .comment{
     padding: 10px 0;
+    margin: 10px;
 }
 .dateButton p{
+    width: 80%;
     font-size: 12px;
 }
+
 
 </style>
