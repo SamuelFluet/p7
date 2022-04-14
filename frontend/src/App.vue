@@ -17,7 +17,7 @@
       </nav>
     </header>
     <h1>
-    <img class="logo" src="..\img\icon-above-font.png">
+    <img class="logo"  alt="logo" src="..\img\icon-above-font.png">
     </h1>
   <router-view></router-view>
 </div>
