@@ -64,6 +64,7 @@ body{
     justify-content: space-between;
 }
 .navanchor{
+  color: black;
   margin: 20px;
   padding-top : 20px;
   text-decoration: none;
@@ -76,6 +77,10 @@ body{
 
 .hellobox span{
   margin-right: 10px;
+}
+nav a:hover{
+    cursor: pointer;
+    color:#0065FC ;
 }
 </style>
 
