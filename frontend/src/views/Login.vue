@@ -43,12 +43,27 @@ h1{
 .co input{
     margin : 10px;
     width: 130%;
-    height: 30px;;
+    height: 30px;
 }
 .co button{
     margin: auto;
     width : 135%;
     font-size: 15px;
+}
+
+@media screen and (max-width: 600px)
+{
+    body{
+        background-color: white;
+        width: 100%;
+        margin: 0px;
+    }
+    .co input{
+        width : 350px;
+    }
+    .co button{
+        width : 370px;
+    }
 }
 
 </style>
