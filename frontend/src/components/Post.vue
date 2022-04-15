@@ -139,6 +139,11 @@ form input{
     margin-left: 5px;
 
 }
+.dateButton{
+    display: flex;
+    justify-content: space-between;
+}
+
 .delete-post button:hover{
     color: blue;
 }

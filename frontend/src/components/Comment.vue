@@ -1,8 +1,11 @@
 <template>
     <div class="comment">
-        <div class = "dateButton2">
-            <p>{{comment.content}}</p> <p class="faitPar">fait par <span class="author">{{author.username}}</span> le  {{comment.date}}</p>
-            <button  class="button3" v-if="user.id == comment.userid || user.role === 'admin'" @click="deleteComment">supprimer</button>
+        <div>
+            <p>{{comment.content}}</p>
+            <div class="dateButton">
+                <p class="faitPar">fait par <span class="author">{{author.username}}</span> le  {{comment.date}}</p>
+                <button  class="button3" v-if="user.id == comment.userid || user.role === 'admin'" @click="deleteComment">supprimer</button>
+            </div>
         </div>
     </div>
 </template>
