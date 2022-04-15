@@ -52,6 +52,9 @@ export default {
     background-color: #e0e0e0fa;
     border-radius: 15px;
 }
+.comment p{
+    margin-left :15px;
+}
 
 .commentPost {
     margin : 5px;
