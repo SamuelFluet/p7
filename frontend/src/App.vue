@@ -37,7 +37,10 @@ export default {
 }
 </script>
 <style>
-
+header{
+  margin-top: 10px;
+  font-size: 20px;
+}
 .logo{
   width: 400px;
   display: block;  
@@ -51,7 +54,7 @@ export default {
   font-family: Verdana;
 }
 body{
-  background-color: rgb(240, 116, 45);
+  background-color: white;
   font-family: Verdana 10px ;
   margin:0px;
 }
@@ -62,6 +65,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    
 }
 .navanchor{
   color: black;
@@ -82,6 +86,11 @@ nav a:hover{
     cursor: pointer;
     color:#0065FC ;
 }
+input{
+  border-radius : 10px;
+
+}
+
 </style>
 
 
