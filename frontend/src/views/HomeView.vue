@@ -7,7 +7,6 @@
         <input type="text" placeholder="A quoi pensez vous ?" v-model="content" required>
         <div>
           <input type="file" @change="upload">
-          <button type="submit">Poster</button>
         </div>
       </form>
     </div>

@@ -1,8 +1,8 @@
 <template>
     <div class="comment">
-        <div class = "dateButton">
-            {{comment.content}} <p>fait par {{author.username}} le  {{comment.date}}</p>
-            <button v-if="user.id == comment.userid || user.role === 'admin'" @click="deleteComment">supprimer</button>
+        <div class = "dateButton2">
+            <p>{{comment.content}}</p> <p class="faitPar">fait par <span class="author">{{author.username}}</span> le  {{comment.date}}</p>
+            <button  class="button3" v-if="user.id == comment.userid || user.role === 'admin'" @click="deleteComment">supprimer</button>
         </div>
     </div>
 </template>
@@ -46,11 +46,32 @@ export default {
 .comment{
     padding: 10px 0;
     margin: 10px;
+    background-color: #e0e0e0fa;
+    border-radius: 15px;
+}
+
+.commentPost {
+    margin : 5px;
+    
 }
 .dateButton p{
     width: 80%;
-    font-size: 12px;
 }
-
-
+form input{
+        width : 97%;
+}
+.button3{
+    padding-left: 10px;
+    border: none;
+    background: none;
+    margin-left: 5px;
+}
+.button3:hover{
+    color: blue;
+}
+@media screen and (max-width: 600px){
+    form input{
+        width : 93%;
+    }
+}
 </style>

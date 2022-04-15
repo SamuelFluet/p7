@@ -4,15 +4,14 @@
             <p>{{post.content}}</p>
             <img :src="post.imageurl" v-if="post.imageurl">
             <div class="dateButton">
-                <p>Fait par {{author.username}} le {{post.date}}</p>
+                <p class="faitPar">Fait par <span class="author">{{author.username}}</span> le {{post.date}}</p>
                 <div v-if="user.id == post.userid || user.role === 'admin'" class="delete-post">
                     <button @click="deletePost">Supprimer</button>
                 </div>
             </div>
         </div>
         <form @submit.prevent="addComment">
-            <input type="text" v-model="commentaire" placeholder="ajouter un commentaire" required >
-            <button type="submit">Commenter</button>
+            <input type="text" v-model="commentaire" placeholder="Écrivez un commentaire..." required >
         </form>
         <div class= "commentContent">
             <Comment v-for="comment in comments" :key="comment.id" 
@@ -95,7 +94,7 @@ export default {
     margin: 20px 0 20px 40px;   
 }
 .postcontent{
-    background-color: grey;
+    background-color:#e0e0e0;
     border-radius: 15px;
     margin-right: 20px;
 }
@@ -114,18 +113,34 @@ export default {
     max-width: 200px;
 }
 .commentContent{
-    background-color: rgba(189, 202, 189, 0.877);
     border-radius: 15px;
     margin-right: 20px;
     padding-left: 10px;;
 }
 
-.dateButton p{
+.faitPar{
     font-size: 12px;
 }
 .button{
     border-radius: 10px;
 
+}
+.author{
+    font-weight: bold;
+}
+form input{
+    width : 97%;
+    height: 15px;
+}
+.delete-post button{
+    padding-left: 10px;
+    border: none;
+    background: none;
+    margin-left: 5px;
+
+}
+.delete-post button:hover{
+    color: blue;
 }
 
 
